@@ -1,0 +1,55 @@
+2022/03/10 15:49:31 [error] [php] Trying to get property 'themes' of non-object (C:\xampp\htdocs\sira\protected\views\layouts\lte.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.25\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii-1.1.25\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(787): SiteController->renderFile()
+#3 C:\xampp\htdocs\sira\protected\controllers\SiteController.php(33): SiteController->render()
+#4 C:\xampp\htdocs\yii-1.1.25\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#5 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii-1.1.25\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii-1.1.25\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii-1.1.25\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\sira\index.php(13): CWebApplication->run()
+REQUEST_URI=/sira/
+in C:\xampp\htdocs\sira\protected\views\layouts\lte.php (11)
+in C:\xampp\htdocs\sira\protected\controllers\SiteController.php (33)
+in C:\xampp\htdocs\sira\index.php (13)
+2022/03/10 15:49:56 [error] [exception.CException] CException: Property "CHttpRequest.themes" is not defined. in C:\xampp\htdocs\yii-1.1.25\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\sira\protected\views\layouts\lte.php(11): CComponent->__get('themes')
+#1 C:\xampp\htdocs\yii-1.1.25\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii-1.1.25\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\sira\protected\controllers\SiteController.php(33): CController->render('index')
+#5 C:\xampp\htdocs\yii-1.1.25\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#6 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii-1.1.25\framework\web\CWebApplication.php(282): CController->run('')
+#10 C:\xampp\htdocs\yii-1.1.25\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 C:\xampp\htdocs\yii-1.1.25\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\sira\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/sira/
+---
+2022/03/10 15:50:17 [error] [exception.CException] CException: Property "CWebApplication.themes" is not defined. in C:\xampp\htdocs\yii-1.1.25\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.25\framework\base\CModule.php(105): CComponent->__get('themes')
+#1 C:\xampp\htdocs\sira\protected\views\layouts\lte.php(11): CModule->__get('themes')
+#2 C:\xampp\htdocs\yii-1.1.25\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii-1.1.25\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\sira\protected\controllers\SiteController.php(33): CController->render('index')
+#6 C:\xampp\htdocs\yii-1.1.25\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii-1.1.25\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii-1.1.25\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\yii-1.1.25\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\xampp\htdocs\yii-1.1.25\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\sira\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/sira/
+---
