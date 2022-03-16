@@ -26,6 +26,11 @@ class User extends CActiveRecord
             return isset($_items[$type]) ? $_items[$type] : false;
     }
 
+    public static function model($classname = __CLASS__)
+    {
+        return parent::model($classname);
+    }
+
     public function tableName()
     {
         return Yii::app()->getModule('user')->tableUser;
