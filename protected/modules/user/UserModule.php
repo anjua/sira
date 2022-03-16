@@ -11,25 +11,24 @@ class UserModule extends CWebModule
     private static $_admin;
     private static $_users = array();
 
-    public static function user($id = 0, $clearCache = false)
+    public static function user($id = 0, $clearCache = false) 
     {
-        if(!$id && !Yii::app()->user->isGuest)
+        if (!$id && !Yii::app()->user->isGuest)
             $id = Yii::app()->user->id;
-        
-        if($id)
-        {
-            if(!isset(self::$_users[$id]) || $clearCache)
+            if ($id) 
+            {
+                if (!isset(self::$_users[$id])||$clearCache)
+                    self::$_users[$id] = User::model()->with(array('profile'))->findbyPk($id);
 
+                return self::$_users[$id];
+            } else return false;
         }
-    }
+	}
 
-    public static function isAdmin()
-    {
-        if(Yii::app()->user->isGuest)
-            return false;
-        else
-        {
+    // public static function isAdmin()
+    // {
+    //     if(Yii::app()->user->isGuest)
+    //         return false;
 
-        }
-    }
+    // }
 }
